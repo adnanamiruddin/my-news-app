@@ -9,7 +9,7 @@ export default function HomePage(props) {
             <Head title={props.title} />
             <Navbar />
             <div>
-                <NewsList news={props.news} />
+                <NewsList news={props.news.data} />
             </div>
         </div>
     );
