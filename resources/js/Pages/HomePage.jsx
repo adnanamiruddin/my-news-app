@@ -3,14 +3,14 @@ import { Link, Head } from "@inertiajs/react";
 
 export default function HomePage(props) {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-slate-50">
+        <div className="flex justify-center items-center min-h-screen bg-slate-100">
             <Head title={props.title} />
             <div>
                 <h1 className="font-bold text-6xl text-center text-gray-800 p-4 mt-4">{props.desc}</h1>
                 {props.news ? (
                     props.news.map((data, i) => {
                         return (
-                            <div key={i} className="p-4 m-2 bg-gray-200 text-black shadow-lg rounded-md my-6">
+                            <div key={i} className="p-4 m-2 bg-gray-200 text-black shadow-lg rounded-md border-2 border-gray-400 my-6">
                                 <p className="text-2xl">{data.title}</p>
                                 <p>{data.desc}</p>
                                 <p>{data.category}</p>
