@@ -1,10 +1,12 @@
 import React from "react";
 import { Link, Head } from "@inertiajs/react";
+import Navbar from "@/Components/Navbar";
 
 export default function HomePage(props) {
     return (
         <div className="min-h-screen bg-slate-100">
             <Head title={props.title} />
+            <Navbar />
             <div>
                 <h1 className="font-bold text-6xl text-center text-gray-800 p-4 mt-4">{props.desc}</h1>
                 {props.news ? (
