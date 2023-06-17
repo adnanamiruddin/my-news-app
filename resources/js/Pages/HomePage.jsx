@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Head } from "@inertiajs/react";
 import Navbar from "@/Components/Navbar";
+import NewsList from "@/Components/HomePage/NewsList";
 
 export default function HomePage(props) {
     return (
@@ -8,21 +9,7 @@ export default function HomePage(props) {
             <Head title={props.title} />
             <Navbar />
             <div>
-                <h1 className="font-bold text-6xl text-center text-gray-800 p-4 mt-4">{props.desc}</h1>
-                {props.news ? (
-                    props.news.map((data, i) => {
-                        return (
-                            <div key={i} className="p-4 m-2 bg-gray-200 text-black shadow-lg rounded-md border-2 border-gray-400 my-6">
-                                <p className="text-2xl">{data.title}</p>
-                                <p>{data.desc}</p>
-                                <p>{data.category}</p>
-                                <p className="text-sm">{data.author}</p>
-                            </div>
-                        );
-                    })
-                ) : (
-                    <p>Belum ada berita saat ini!</p>
-                )}
+                <NewsList news={props.news} />
             </div>
         </div>
     );
