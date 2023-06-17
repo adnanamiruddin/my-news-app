@@ -28,8 +28,16 @@ const isNews = (news) => {
     });
 };
 
+const noNews = () => {
+    return (
+        <div>
+            <h2 className="text-3xl font-bold text-black">Belum ada berita bang</h2>
+        </div>
+    );
+};
+
 const NewsList = ({ news }) => {
-    return isNews(news)
+    return !news ? noNews() : isNews(news);
 };
 
 export default NewsList;
